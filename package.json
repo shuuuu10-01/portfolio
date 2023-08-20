@@ -6,14 +6,17 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:js": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:css": "stylelint --fix '**/*.css'",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint-staged": "lint-staged",
+    "prepare": "husky install"
   },
   "dependencies": {
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.28.1",
     "eslint-plugin-unused-imports": "^3.0.0",
+    "lint-staged": "^14.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "stylelint-config-recess-order": "^4.3.0",
@@ -28,11 +31,16 @@
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "husky": "^8.0.3",
     "prettier": "^3.0.2",
     "stylelint": "^15.10.3",
     "stylelint-config-standard": "^34.0.0",
     "stylelint-prettier": "^4.0.2",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": "eslint --fix",
+    "*.css": "stylelint --fix"
   }
 }

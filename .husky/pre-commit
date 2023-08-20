@@ -1,0 +1,2 @@
+# コミット前にeslint・stylelintのチェックが走る
+npm run lint-staged
