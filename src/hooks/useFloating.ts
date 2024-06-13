@@ -2,6 +2,8 @@ import { useFrame } from '@react-three/fiber';
 import { useRef, useEffect, MutableRefObject } from 'react';
 import { LineSegments, Material, Mesh } from 'three';
 
+import { getRandomBetween } from '../utils/number';
+
 const height = window.innerHeight;
 
 function useFloating<T extends LineSegments | Mesh>(): MutableRefObject<T> {
@@ -10,7 +12,6 @@ function useFloating<T extends LineSegments | Mesh>(): MutableRefObject<T> {
   useFrame(() => {
     meshRef.current.rotation.x += 0.01 * initRandom;
     meshRef.current.rotation.y += 0.01 * initRandom;
-    meshRef.current.rotation.z += 0.01;
 
     meshRef.current.position.y += 1.5;
     const material = meshRef.current.material as Material;
@@ -24,9 +25,9 @@ function useFloating<T extends LineSegments | Mesh>(): MutableRefObject<T> {
   });
 
   useEffect(() => {
-    meshRef.current.rotation.x = random(1, 5);
-    meshRef.current.rotation.y = random(1, 5);
-    meshRef.current.rotation.z = random(1, 5);
+    meshRef.current.rotation.x = getRandomBetween(1, 5);
+    meshRef.current.rotation.y = getRandomBetween(1, 5);
+    meshRef.current.rotation.z = getRandomBetween(1, 5);
 
     meshRef.current.position.x = window.innerWidth * (Math.random() - 0.5);
     meshRef.current.position.y = height * Math.random();
@@ -36,8 +37,3 @@ function useFloating<T extends LineSegments | Mesh>(): MutableRefObject<T> {
   return meshRef;
 }
 export default useFloating;
-
-function random(min: number, max: number) {
-  const rand = Math.floor(min + (max - min + 1) * Math.random());
-  return rand;
-}
