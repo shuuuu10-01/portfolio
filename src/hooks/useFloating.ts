@@ -8,10 +8,10 @@ const height = window.innerHeight;
 
 function useFloating<T extends LineSegments | Mesh>(): MutableRefObject<T> {
   const meshRef = useRef<T>(null!);
-  const initRandom = Math.random();
   useFrame(() => {
-    meshRef.current.rotation.x += 0.01 * initRandom;
-    meshRef.current.rotation.y += 0.01 * initRandom;
+    meshRef.current.rotation.x += 0.01 * Math.random();
+    meshRef.current.rotation.y += 0.01 * Math.random();
+    meshRef.current.rotation.z += 0.01 * Math.random();
 
     meshRef.current.position.y += 1.5;
     const material = meshRef.current.material as Material;
