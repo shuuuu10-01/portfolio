@@ -3,6 +3,7 @@ import { Canvas } from '@react-three/fiber';
 
 import './App.css';
 import Box from './components/Box';
+import FlameBox from './components/FlameBox';
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
           intensity={Math.PI}
         />
         {[...Array(100)].map((_, index) => {
+          return <FlameBox key={index} />;
+        })}
+        {[...Array(25)].map((_, index) => {
           return <Box key={index} />;
         })}
       </Canvas>
