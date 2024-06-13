@@ -3,7 +3,7 @@ import { BoxGeometry, LineSegments } from 'three';
 
 import useFloating from '../hooks/useFloating';
 
-function Box(props: ThreeElements['lineSegments']) {
+function FlameBox(props: ThreeElements['lineSegments']) {
   const floatingRef = useFloating<LineSegments>();
 
   return (
@@ -14,4 +14,4 @@ function Box(props: ThreeElements['lineSegments']) {
   );
 }
 
-export default Box;
+export default FlameBox;
