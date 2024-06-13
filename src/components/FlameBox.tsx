@@ -10,7 +10,7 @@ function FlameBox(props: ThreeElements['lineSegments']) {
   return (
     <lineSegments {...props} ref={floatingRef} scale={getRandomBetween(10, 40)}>
       <edgesGeometry args={[new BoxGeometry(1, 1, 1)]} />
-      <lineBasicMaterial color={'#fff'} />
+      <lineBasicMaterial color={'#3997d1'} />
     </lineSegments>
   );
 }

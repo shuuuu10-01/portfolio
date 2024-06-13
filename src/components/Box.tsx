@@ -10,7 +10,7 @@ function Box(props: ThreeElements['mesh']) {
   return (
     <mesh {...props} ref={floatingRef} scale={getRandomBetween(10, 30)}>
       <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color={'white'} />
+      <meshStandardMaterial color={'#3997d1'} />
     </mesh>
   );
 }
