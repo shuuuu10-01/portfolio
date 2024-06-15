@@ -5,7 +5,7 @@ import useFloating from '../hooks/useFloating';
 import { getRandomBetween } from '../utils/number';
 
 function FlameBox(props: ThreeElements['lineSegments']) {
-  const floatingRef = useFloating<LineSegments>();
+  const { floatingRef } = useFloating<LineSegments>();
 
   return (
     <lineSegments {...props} ref={floatingRef} scale={getRandomBetween(10, 40)}>

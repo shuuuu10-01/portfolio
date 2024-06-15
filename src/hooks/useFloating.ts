@@ -6,34 +6,41 @@ import { getRandomBetween } from '../utils/number';
 
 const height = window.innerHeight;
 
-function useFloating<T extends LineSegments | Mesh>(): MutableRefObject<T> {
-  const meshRef = useRef<T>(null!);
+function useFloating<T extends LineSegments | Mesh>(): {
+  floatingRef: MutableRefObject<T>;
+  resetPosition: () => void;
+} {
+  const floatingRef = useRef<T>(null!);
   useFrame(() => {
-    meshRef.current.rotation.x += 0.01 * Math.random();
-    meshRef.current.rotation.y += 0.01 * Math.random();
-    meshRef.current.rotation.z += 0.01 * Math.random();
+    floatingRef.current.rotation.x += 0.01 * Math.random();
+    floatingRef.current.rotation.y += 0.01 * Math.random();
+    floatingRef.current.rotation.z += 0.01 * Math.random();
 
-    meshRef.current.position.y += 1.5;
-    const material = meshRef.current.material as Material;
+    floatingRef.current.position.y += 1;
 
-    if (meshRef.current.position.y >= height) {
-      meshRef.current.position.x = window.innerWidth * (Math.random() - 0.5);
-      meshRef.current.position.y = 0;
-      meshRef.current.position.z = window.innerWidth * (Math.random() - 0.5);
-      material.opacity = 1;
+    if (floatingRef.current.position.y >= height) {
+      resetPosition();
     }
   });
 
   useEffect(() => {
-    meshRef.current.rotation.x = getRandomBetween(1, 5);
-    meshRef.current.rotation.y = getRandomBetween(1, 5);
-    meshRef.current.rotation.z = getRandomBetween(1, 5);
+    floatingRef.current.rotation.x = getRandomBetween(1, 5);
+    floatingRef.current.rotation.y = getRandomBetween(1, 5);
+    floatingRef.current.rotation.z = getRandomBetween(1, 5);
 
-    meshRef.current.position.x = window.innerWidth * (Math.random() - 0.5);
-    meshRef.current.position.y = height * Math.random();
-    meshRef.current.position.z = window.innerWidth * (Math.random() - 0.5);
+    floatingRef.current.position.x = window.innerWidth * (Math.random() - 0.5);
+    floatingRef.current.position.y = height * Math.random();
+    floatingRef.current.position.z = window.innerWidth * (Math.random() - 0.5);
   }, []);
 
-  return meshRef;
+  function resetPosition() {
+    const material = floatingRef.current.material as Material;
+    floatingRef.current.position.x = window.innerWidth * (Math.random() - 0.5);
+    floatingRef.current.position.y = 0;
+    floatingRef.current.position.z = window.innerWidth * (Math.random() - 0.5);
+    material.opacity = 1;
+  }
+
+  return { floatingRef, resetPosition };
 }
 export default useFloating;
