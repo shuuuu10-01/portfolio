@@ -1,17 +1,12 @@
-import {
-  Button,
-  HStack,
-  Image,
-  Modal,
-  ModalBody,
-  ModalContent,
-  ModalHeader,
-  ModalOverlay,
-} from '@chakra-ui/react';
+import { Button, HStack, Image } from '@chakra-ui/react';
 import { useState } from 'react';
+
+import ArticlesModal from './ArticlesModal';
+import ProductsModal from './ProductsModal';
 
 function Header() {
   const [isOpenProducts, setIsOpenProducts] = useState(false);
+  const [isOpenArticles, setIsOpenArticles] = useState(false);
   return (
     <>
       <HStack
@@ -43,18 +38,14 @@ function Header() {
             variant="ghost"
             border="none"
             borderRadius={0}
-            _hover={{ backgroundColor: '#fff' }}>
+            _hover={{ backgroundColor: '#fff' }}
+            onClick={() => setIsOpenArticles(true)}>
             Articles
           </Button>
         </HStack>
       </HStack>
-      <Modal isOpen={isOpenProducts} onClose={() => setIsOpenProducts(false)}>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Products</ModalHeader>
-          <ModalBody>aaa</ModalBody>
-        </ModalContent>
-      </Modal>
+      <ProductsModal isOpen={isOpenProducts} onClose={() => setIsOpenProducts(false)} />
+      <ArticlesModal isOpen={isOpenArticles} onClose={() => setIsOpenArticles(false)} />
     </>
   );
 }
