@@ -16,6 +16,7 @@ function Footer() {
             color={'primary'}
             icon={<Icon as={FaXTwitter} />}
             _hover={{ color: 'primary' }}
+            variant="text"
           />
         </Box>
         <Box as="li">
@@ -27,6 +28,7 @@ function Footer() {
             color="primary"
             icon={<Icon as={FaGithub} />}
             _hover={{ color: 'primary' }}
+            variant="text"
           />
         </Box>
         <Box as="li">
@@ -38,6 +40,7 @@ function Footer() {
             color="primary"
             icon={<Icon as={SiZenn} />}
             _hover={{ color: 'primary' }}
+            variant="text"
           />
         </Box>
       </Flex>
