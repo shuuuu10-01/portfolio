@@ -1,11 +1,12 @@
 import { ChakraBaseProvider, extendBaseTheme, theme as chakraTheme } from '@chakra-ui/react';
 import { ReactNode } from 'react';
 
-const { Button, Modal } = chakraTheme.components;
+const { Button, Card, Modal } = chakraTheme.components;
 
 const theme = extendBaseTheme({
   components: {
     Button,
+    Card,
     Modal,
   },
   semanticTokens: {
