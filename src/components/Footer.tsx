@@ -6,7 +6,7 @@ import { SiZenn } from 'react-icons/si';
 function Footer() {
   return (
     <Box as="footer" position="fixed" bottom={0} padding="30px">
-      <Flex as="ul" listStyleType="none" gap="30px">
+      <Flex as="ul" listStyleType="none" gap="10px">
         <Box as="li">
           <IconButton
             as="a"
