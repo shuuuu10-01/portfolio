@@ -1,11 +1,12 @@
-import { ChakraBaseProvider, extendBaseTheme, Button, IconButton, Icon } from '@chakra-ui/react';
+import { ChakraBaseProvider, extendBaseTheme, theme as chakraTheme } from '@chakra-ui/react';
 import { ReactNode } from 'react';
+
+const { Button, Modal } = chakraTheme.components;
 
 const theme = extendBaseTheme({
   components: {
     Button,
-    IconButton,
-    Icon,
+    Modal,
   },
   semanticTokens: {
     colors: {
@@ -22,6 +23,9 @@ const theme = extendBaseTheme({
         },
       },
     },
+  },
+  fonts: {
+    body: '"Roboto Mono", sans-serif',
   },
 });
 
