@@ -26,7 +26,7 @@ const theme = extendBaseTheme({
     },
   },
   fonts: {
-    body: '"Roboto Mono", sans-serif',
+    body: '"Noto Sans JP", sans-serif',
   },
 });
 

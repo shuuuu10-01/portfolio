@@ -20,8 +20,8 @@ function ProductsModal({ ...props }: Omit<ComponentPropsWithoutRef<typeof Modal>
     <Modal {...props}>
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader fontFamily={'Noto Sans JP'}>Products</ModalHeader>
-        <ModalBody paddingBottom="24px" paddingTop={0} fontFamily={'Noto Sans JP'}>
+        <ModalHeader>Products</ModalHeader>
+        <ModalBody paddingBottom="24px" paddingTop={0}>
           <Link href="https://github.com/shuuuu10-01/chat-chef" target="_blank">
             <Card variant="outline">
               <CardBody display="flex" alignItems="center" gap="20px">

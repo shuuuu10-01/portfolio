@@ -27,7 +27,7 @@ function Header() {
             variant="ghost"
             border="none"
             borderRadius={0}
-            outline="none"
+            fontFamily="Roboto Mono"
             _hover={{ backgroundColor: '#fff' }}
             onClick={() => setIsOpenProducts(true)}>
             Products
@@ -38,6 +38,7 @@ function Header() {
             variant="ghost"
             border="none"
             borderRadius={0}
+            fontFamily="Roboto Mono"
             _hover={{ backgroundColor: '#fff' }}
             onClick={() => setIsOpenArticles(true)}>
             Articles
