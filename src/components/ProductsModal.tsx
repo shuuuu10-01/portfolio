@@ -29,7 +29,7 @@ function ProductsModal({ ...props }: Omit<ComponentPropsWithoutRef<typeof Modal>
                 <Box>
                   <Text fontWeight="bold">Chat Chef</Text>
                   <Text mb="5px">ChatGPT APIを使ったご飯提案アプリ</Text>
-                  <HStack spacing="5px" width="fit-content" height="24px" paddingX="6px">
+                  <HStack spacing="5px" width="fit-content">
                     <Flex gap="4px" alignItems="center">
                       <Text color="primary" fontSize="12px">
                         #React
@@ -56,7 +56,7 @@ function ProductsModal({ ...props }: Omit<ComponentPropsWithoutRef<typeof Modal>
                 <Box>
                   <Text fontWeight="bold">Shopping Mate</Text>
                   <Text mb="5px">お買い物に便利なTodoアプリ</Text>
-                  <HStack spacing="5px" width="fit-content" paddingX="6px">
+                  <HStack spacing="5px" width="fit-content">
                     <Flex columnGap="4px" rowGap="2px" alignItems="center" flexWrap="wrap">
                       <Text color="primary" fontSize="12px">
                         #React Native
