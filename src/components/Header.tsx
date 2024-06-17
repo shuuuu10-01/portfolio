@@ -16,7 +16,7 @@ function Header() {
         justifyContent="space-between"
         width="100dvw"
         zIndex={2}>
-        <Image width="50px" src="/assets/logo.png"></Image>
+        <Image width="50px" borderRadius="full" src="/assets/logo.png"></Image>
         <Button
           className="button"
           color="primary"
