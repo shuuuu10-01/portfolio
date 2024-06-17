@@ -7,5 +7,5 @@
   },
   "stylelint.validate": ["css", "scss"],
   "stylelint.config": null,
-  "cSpell.ignoreRegExpList": ["[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+", "stylelint"]
+  "cSpell.ignoreRegExpList": ["[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+", "stylelint", "chakra"]
 }
