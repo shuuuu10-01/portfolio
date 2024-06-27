@@ -1,27 +1,22 @@
-# React + TypeScript + Vite
+# Suu's Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Suu's Portfolio](docs/portfolio.png)
 
-Currently, two official plugins are available:
+## 使用技術
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- Typescript
+- Vite
+- react three（立方体の描画）
+- ChakraUI（モーダルの表示）
+- CloudFlare（デプロイ）
 
-## Expanding the ESLint configuration
+### ちょっとしたこだわり
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- スマホ対応
+  - 横幅が一定より狭くなると立方体の表示数が少なくなるようにしています。
+- 立方体のクリック
+  - 濃い青の立方体はクリックすると消えるようにしています。
+  - ぜひ、エイム練習に使ってみてください
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+![preview](docs/preview.gif)
