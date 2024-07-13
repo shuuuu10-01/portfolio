@@ -49,7 +49,7 @@ function ProductsModal({ ...props }: Omit<ComponentPropsWithoutRef<typeof Modal>
               </CardBody>
             </Card>
           </Link>
-          <Link href="https://github.com/shuuuu10-01/chat-chef" target="_blank">
+          <Link href="https://github.com/shuuuu10-01/shopping-mate" target="_blank">
             <Card variant="outline">
               <CardBody display="flex" alignItems="center" gap="20px">
                 <Image width="50px" src="/assets/shopping-mate.png"></Image>
