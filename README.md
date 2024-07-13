@@ -1,4 +1,4 @@
-# [Suu's Portfolio](https://portfolio-c7p.pages.dev)
+# [Suu's Portfolio](https://suu-u.com)
 
 ![Suu's Portfolio](docs/portfolio.png)
 
