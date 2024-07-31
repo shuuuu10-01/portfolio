@@ -10,7 +10,7 @@ function Footer() {
         <Box as="li">
           <IconButton
             as="a"
-            href="https://x.com/shuuuu10_01"
+            href="https://x.com/suu_u522"
             target="_blank"
             aria-label="X Link"
             color={'primary'}
